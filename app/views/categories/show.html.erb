@@ -1,3 +1,7 @@
 <h1>
    <%= @category.name %>
 </h1>
+
+<% products = @category.products.sort_by { |product| } %>
+
+<%= render products, hide_category: true %>

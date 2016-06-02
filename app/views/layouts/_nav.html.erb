@@ -16,7 +16,10 @@
            <% @categories.each do |category| %>
             <li><%= link_to category.name, category %></li>
           <% end %>
-         </ul>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "Voeg toe", new_product_path %></li>
+        </ul>
          <form class="navbar-form navbar-right" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
