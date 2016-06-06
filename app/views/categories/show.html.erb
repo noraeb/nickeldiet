@@ -1,7 +1,11 @@
-<h1>
+<h2>
    <%= @category.name %>
-</h1>
+</h2>
 
-<% products = @category.products.sort_by { |product| } %>
-
-<%= render products, hide_category: true %>
+<% @products = Product.includes(:foodgroup, :category) %>
+<% @products.each do |product| %>
+  <% if (product.category.name == @category.name) %>
+    <%= product.foodgroup.name %>
+    <ul><li><%= product.name %> </li></ul>
+  <% end %>
+<% end %>

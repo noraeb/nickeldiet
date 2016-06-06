@@ -1,0 +1,6 @@
+<% @foodgroups.each do |foodgroup| %>
+  <h4><%= foodgroup.name %></h4>
+  <% foodgroup.products.each do |product| %>
+    <ul><li><%= product.name %></li></ul>
+  <% end %>
+<% end %>

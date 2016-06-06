@@ -8,8 +8,16 @@
     <div class="form-group">
        <%= f.label :categorie, :class => "control-label" %>
        <div>
-          <% genres = Category.all.map{|t| [t.name, t.id]}.sort %>
+          <% category = Category.all.map{|t| [t.name, t.id]}.sort %>
           <%= f.collection_select :category_id, Category.order(:name),:id,:name, include_blank: false %>
+       </div>
+    </div>
+
+    <div class="form-group">
+       <%= f.label :foodgroup, :class => "control-label" %>
+       <div>
+          <% foodgroup = Foodgroup.all.map{|t| [t.name, t.id]}.sort %>
+          <%= f.collection_select :foodgroup_id, Foodgroup.order(:name),:id,:name %>
        </div>
     </div>
 
