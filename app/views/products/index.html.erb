@@ -1,4 +1,12 @@
 <h3 id="show">Gevonden producten:</h3>
 <% @products.each do |product| %>
-  <h4><%= link_to product.name, product %></h4>
+  <h4><%= link_to product.name, product %>
+    <% if product.category_id == 1 %>
+    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+    <% elsif product.category_id == 2 %>
+    <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>
+    <% else %>
+    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+    <% end %>
+  </h4>
 <% end %>

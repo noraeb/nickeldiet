@@ -1,10 +1,10 @@
 class ProductsController < ApplicationController
 
   def index
-    @products = Product.order(:name)
+    @products = Product.all
     @categories = Category.all
     if params[:search]
-      @products = Product.search(params[:search])
+      @products = Product.search(params[:search]).order(:name)
     else
        print "Sorry, geen product gevonden."
     end
@@ -12,7 +12,7 @@ class ProductsController < ApplicationController
 
 
   def show
-      @categories = Category.all
+      @categories = Category.all.order(:name)
       @product = Product.find( params[:id] )
   end
 

@@ -1,6 +1,13 @@
-<h3 id="show">
+<h2 id="show">
    <%= @category.name %>
-</h3>
+   <% if @category.id == 1 %>
+    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+   <% elsif @category.id == 2 %>
+    <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>
+   <% else %>
+    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+   <% end %>
+</h2>
 
 <% @foodgroups.each do |foodgroup|%>
   <h3><%= foodgroup.name %></h3>

@@ -90,7 +90,7 @@ h1, h2, h3, h4, h5, a {
 }
 
 
-h1,h3#show {
+h1, h2, h3#show {
   margin-top: 100px;
 }
 
@@ -100,4 +100,22 @@ h1,h3#show {
 
 i {
   color: black;
+}
+
+.glyphicon-ok {
+  color: green;
+  vertical-align: top;
+}
+
+.glyphicon-asterisk {
+  color: orange;
+  vertical-align: bottom;
+}
+
+.glyphicon-remove {
+  color: red;
+  vertical-align: bottom;
+}
+a:hover{
+  color: #939393 !important;
 }
