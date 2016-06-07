@@ -1,5 +1,6 @@
 <div class="margin">
 <h3 id="show">Gevonden producten:</h3>
+<% unless @products.blank? %>
 <% @products.each do |product| %>
   <h4><%= link_to product.name, product %>
     <% if product.category_id == 1 %>
@@ -10,5 +11,9 @@
     <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
     <% end %>
   </h4>
+<% end %>
+<% else %>
+<h5><%= "Er zijn geen producten gevonden." %></h5>
+<div class="inlineimg"><img src="/assets/no-chad.png" width="150" height="150"/></div> 
 <% end %>
 </div>
