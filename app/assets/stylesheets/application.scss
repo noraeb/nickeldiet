@@ -14,8 +14,14 @@ button.navbar-toggle.collapsed {
   padding: 5px;
   border-style: none;
   margin-top: 15px;
+  margin-right: 5px;
+  margin-left: 3px;
 }
 
 .btn-transparant {
   background-color: transparent;
+}
+
+.navbar-brand {
+  font-size: 12px;
 }
