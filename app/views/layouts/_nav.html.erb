@@ -12,7 +12,9 @@
          <div class="form-group navbar-right">
            <%= form_tag(products_path, :method => "get", id: "search-form") do %>
              <%= text_field_tag :search, params[:search], placeholder: "Zoek product" %>
-             <%= submit_tag "Search" %>
+             <%= button_tag(:type => 'submit', :class => 'btn btn-transparant btn-sm') do %>
+ <i class="glyphicon glyphicon-search"></i>
+<% end %>
            <% end %>
          </div>
       </div>
