@@ -6,8 +6,8 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @foodgroups = Foodgroup.all
     @foodgroup = Foodgroup.find ( params[:id])
+    @foodgroups = Foodgroup.all
     @categories = Category.all
     @category = Category.find( params[:id] )
     @products = @foodgroup.products
