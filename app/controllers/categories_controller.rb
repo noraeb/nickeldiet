@@ -10,6 +10,7 @@ class CategoriesController < ApplicationController
     @foodgroup = Foodgroup.find ( params[:id])
     @categories = Category.all
     @category = Category.find( params[:id] )
+    @products = @foodgroup.products
   end
 
 end

@@ -6,15 +6,9 @@ body {
 }
 
 div#main {
-   margin: 4em;
+   margin: 3em;
 }
 
-@media screen and (max-width: 568px) {
-    div#main {
-        margin: 3em;
-
-    }
-}
 .form-group {
   padding: 13px;
   margin: 0px;
