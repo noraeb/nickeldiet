@@ -12,6 +12,7 @@ div#main {
 .form-group {
   padding: 13px;
   margin: 0px;
+  color: white;
 }
 
 button.navbar-toggle.collapsed {
@@ -33,7 +34,8 @@ button.navbar-toggle.collapsed {
   font-size: 80px;
   color: white;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 @media screen and (max-width: 568px) {
@@ -52,8 +54,9 @@ button.navbar-toggle.collapsed {
         font-size:45px;
     }
 }
-.form-group.index {
+.form-group1.index {
   vertical-align: middle;
+  color: black;
 }
 
 #search-form1 {
@@ -75,10 +78,23 @@ button.navbar-toggle.collapsed {
 
 .inline {
   display: inline-block;
-  margin: auto;
+  margin: 5px;
   vertical-align: middle;
 }
 
-h3, h4, h5, a {
+text, h1, h2, h3, h4, h5, a {
   color: white;
+}
+
+form#search-form1 {
+  text-align: center;
+  position: relative;
+}
+
+h1,h3#show {
+  margin-top: 100px;
+}
+
+.text_field {
+  color: black;
 }

@@ -9,9 +9,9 @@
   <h1 id="title">Nickelapp</h1>
   <div style="text-align:center;">
     <div class="inline"><img src="/assets/chad-2.jpg" width="100" height="100" overflow="hidden" class="img-circle" /></div>
-    <div class ="inline"><div class="form-group index">
+    <div class ="inline"><div class="form-group1 index">
       <%= form_tag(products_path, :method => "get", id: "search-form1") do %>
-      <%= text_field_tag :search1, params[:search], placeholder: "Zoek product..." %>
+      <%= text_field_tag :search, params[:search], placeholder: "Zoek product..." %>
       <%= button_tag(:type => 'submit', :class => 'btn btn-transparant') do %>
         <i id="icon" class="glyphicon glyphicon-search"></i>
       <% end %>
