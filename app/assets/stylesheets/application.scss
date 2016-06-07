@@ -71,7 +71,7 @@ button.navbar-toggle.collapsed {
   position: relative;
 }
 
-#icon {
+#icon1 {
   color: white;
   font-size: 50px;
 }
@@ -82,19 +82,29 @@ button.navbar-toggle.collapsed {
   vertical-align: middle;
 }
 
-text, h1, h2, h3, h4, h5, a {
+h1, h2, h3, h4, h5, a {
   color: white;
 }
 
 form#search-form1 {
   text-align: center;
   position: relative;
-}
 
+}
+@media screen and (max-width: 568px) {
+    form#search-form1{
+        margin-left: -50px;
+        width: 400px;
+    }
+}
 h1,h3#show {
   margin-top: 100px;
 }
 
 .text_field {
+  color: black;
+}
+
+i {
   color: black;
 }
