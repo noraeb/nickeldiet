@@ -9,6 +9,12 @@ div#main {
    margin: 4em;
 }
 
+@media screen and (max-width: 568px) {
+    div#main {
+        margin: 3em;
+
+    }
+}
 .form-group {
   padding: 13px;
   margin: 0px;
@@ -17,8 +23,6 @@ div#main {
 
 button.navbar-toggle.collapsed {
   border-style: none;
-
-
 }
 
 .btn-transparant {
@@ -39,8 +43,8 @@ button.navbar-toggle.collapsed {
 }
 
 @media screen and (max-width: 568px) {
-        #title {
-    font-size:80px;
+    #title {
+        font-size:80px;
     }
 }
 @media screen and (max-width: 768px) {
@@ -55,23 +59,23 @@ button.navbar-toggle.collapsed {
     }
 }
 .form-group1.index {
-  vertical-align: middle;
   color: black;
 }
 
 #search-form1 {
   text-align: center;
   font-size: 40px;
-  text-align: center;
+
+}
+@media screen and (max-width: 568px) {
+    #search-form1 {
+        font-size:24px;
+        margin-left: -20px;
+        margin-right: 20px;
+    }
 }
 
-#search1 {
-  height: 80px;
-  width: 300px;
-  position: relative;
-}
-
-#icon1 {
+#icon1   {
   color: white;
   font-size: 50px;
 }
@@ -86,17 +90,7 @@ h1, h2, h3, h4, h5, a {
   color: white;
 }
 
-form#search-form1 {
-  text-align: center;
-  position: relative;
 
-}
-@media screen and (max-width: 568px) {
-    form#search-form1{
-        margin-left: -50px;
-        width: 400px;
-    }
-}
 h1,h3#show {
   margin-top: 100px;
 }
