@@ -3,6 +3,6 @@ class Product < ActiveRecord::Base
   belongs_to :foodgroup
 
   def self.search(query)
-    where("LOWER(title) like ?", "%#{query.downcase}%")
+    where("LOWER(name) like ?", "%#{query.downcase}%")
   end
 end

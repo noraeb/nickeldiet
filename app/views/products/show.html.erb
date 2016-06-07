@@ -1,0 +1,7 @@
+<h3>
+  <%= @product.name %>
+</h3>
+<h5>Categorie: <%= @product.category.name %> </h5>
+
+<%= link_to "Delete", product_path( @product ), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default", style: "float: left" %>
+<%= link_to "Edit", edit_product_path( @product ), class: "btn btn-default", style: "float: left" %>

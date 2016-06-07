@@ -1,11 +1,13 @@
-<h2>
+<h3>
    <%= @category.name %>
-</h2>
+</h3>
 
-<% @products = Product.includes(:foodgroup, :category) %>
-<% @products.each do |product| %>
-  <% if (product.category.name == @category.name) %>
-    <%= product.foodgroup.name %>
-    <ul><li><%= product.name %> </li></ul>
+<% @foodgroups.each do |foodgroup|%>
+  <%= foodgroup.name %>
+  <% foodgroup.products.each do |product| %>
+    <% if (product.category.name == @category.name) %>
+      <ul><li><%= link_to product.name, product %></li></ul>
+    <% end %>
   <% end %>
+  <hr>
 <% end %>

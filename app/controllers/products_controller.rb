@@ -1,11 +1,19 @@
 class ProductsController < ApplicationController
 
   def index
+    @products = Product.all
+    @categories = Category.all
     if params[:search]
       @products = Product.search(params[:search])
     else
        print "Sorry, geen product gevonden."
     end
+  end
+
+
+  def show
+      @categories = Category.all
+      @product = Product.find( params[:id] )
   end
 
   def new
@@ -23,6 +31,29 @@ class ProductsController < ApplicationController
          render new_product_path
       end
    end
+
+  def edit
+    @categories = Category.all
+    @product = Product.find( params[:id] )
+  end
+
+  def update
+    @product = Product.find( params[:id] )
+
+    if @product.update_attributes( product_params )
+      redirect_to @product
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+  @product = Product.find( params[:id] )
+
+  @product.destroy
+
+  redirect_to root_path
+end
 
 private
 
