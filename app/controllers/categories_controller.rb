@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
 
   def index
     @categories = Category.all
-    @foodgroups = Foodgroup.order(:name).order(:name)
+    @foodgroups = Foodgroup.order(:name)
   end
 
   def show
@@ -10,7 +10,7 @@ class CategoriesController < ApplicationController
     @categories = Category.all
     @category = Category.find( params[:id] )
     @foodgroup = Foodgroup.find( params[:id] )
-    @products = @category.products.order(:name)
+    @products = @category.products
   end
 
 end

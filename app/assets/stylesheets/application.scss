@@ -1,8 +1,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body {
+    background-color: black;
+}
+
 div#main {
-   margin: 4.25em;
+   margin: 4em;
 }
 
 .form-group {
@@ -11,17 +15,70 @@ div#main {
 }
 
 button.navbar-toggle.collapsed {
-  padding: 5px;
   border-style: none;
-  margin-top: 15px;
-  margin-right: 5px;
-  margin-left: 3px;
+
+
 }
 
 .btn-transparant {
-  background-color: transparent;
+  background-color: transparent;;
 }
 
 .navbar-brand {
-  font-size: 12px;
+  font-size: 14px;
+}
+
+#title {
+  font-family: 'Black Ops One', sans-serif;;
+  font-size: 80px;
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 568px) {
+        #title {
+    font-size:80px;
+    }
+}
+@media screen and (max-width: 768px) {
+    #title {
+        font-size:50px;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    #title{
+        font-size:45px;
+    }
+}
+.form-group.index {
+  vertical-align: middle;
+}
+
+#search-form1 {
+  text-align: center;
+  font-size: 40px;
+  text-align: center;
+}
+
+#search1 {
+  height: 80px;
+  width: 300px;
+  position: relative;
+}
+
+#icon {
+  color: white;
+  font-size: 50px;
+}
+
+.inline {
+  display: inline-block;
+  margin: auto;
+  vertical-align: middle;
+}
+
+h3, h4, h5, a {
+  color: white;
 }

@@ -3,7 +3,7 @@
 </h3>
 
 <% @foodgroups.each do |foodgroup|%>
-  <%= foodgroup.name %>
+  <h3><%= foodgroup.name %></h3>
   <% foodgroup.products.each do |product| %>
     <% if (product.category.name == @category.name) %>
       <p><%= link_to product.name, product %></p>

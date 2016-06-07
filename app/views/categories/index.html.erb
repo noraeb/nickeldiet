@@ -1,13 +1,22 @@
-
-  <% @foodgroups.each do |foodgroup|%>
-    <h3><%= foodgroup.name %></h3>
-    <% @categories.each do |category| %>
-      <%= category.name %>
-      <% foodgroup.products.each do |product| %>
-        <% if (product.category.name == category.name) %>
-          <p><%= link_to product.name, product %></p>
-        <% end %>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nickelapp</title>
+  <link href='https://fonts.googleapis.com/css?family=Black+Ops+One' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <h1 id="title">Nickelapp</h1>
+  <div style="text-align:center;">
+    <div class="inline"><img src="/assets/chad-2.jpg" width="100" height="100" overflow="hidden" class="img-circle" /></div>
+    <div class ="inline"><div class="form-group index">
+      <%= form_tag(products_path, :method => "get", id: "search-form1") do %>
+      <%= text_field_tag :search1, params[:search], placeholder: "Zoek product..." %>
+      <%= button_tag(:type => 'submit', :class => 'btn btn-transparant') do %>
+        <i id="icon" class="glyphicon glyphicon-search"></i>
       <% end %>
-    <hr>
-    <% end %>
-<% end %>
+      <% end %>
+    </div></div>
+  </div>
+</body>
+</html>
