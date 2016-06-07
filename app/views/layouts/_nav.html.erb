@@ -9,6 +9,12 @@
             <span class="icon-bar"></span>
          </button>
          <%= link_to "Home", root_path, class: "navbar-brand" %>
+         <div class="form-group navbar-right">
+           <%= form_tag(products_path, :method => "get", id: "search-form") do %>
+             <%= text_field_tag :search, params[:search], placeholder: "Zoek product" %>
+             <%= submit_tag "Search" %>
+           <% end %>
+         </div>
       </div>
 
       <div id="navbar" class="navbar-collapse collapse">
@@ -20,12 +26,7 @@
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to "Voeg toe", new_product_path %></li>
         </ul>
-          <div class="form-group navbar-right">
-            <%= form_tag(products_path, :method => "get", id: "search-form") do %>
-              <%= text_field_tag :search, params[:search], placeholder: "Zoek product" %>
-              <%= submit_tag "Search" %>
-            <% end %>
-          </div>
+
 
 
 

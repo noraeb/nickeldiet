@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
 
   def index
-    @products = Product.all
+    @products = Product.order(:name)
     @categories = Category.all
     if params[:search]
       @products = Product.search(params[:search])

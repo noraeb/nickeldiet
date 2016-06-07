@@ -6,7 +6,7 @@
   <%= foodgroup.name %>
   <% foodgroup.products.each do |product| %>
     <% if (product.category.name == @category.name) %>
-      <ul><li><%= link_to product.name, product %></li></ul>
+      <p><%= link_to product.name, product %></p>
     <% end %>
   <% end %>
   <hr>
