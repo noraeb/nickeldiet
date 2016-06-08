@@ -1,8 +1,8 @@
 class ProductsController < ApplicationController
+before_action :authenticate_user!, :except => [:show, :index]
 
   def index
     @products = Product.all
-    @categories = Category.all
     if params[:search]
       @products = Product.search(params[:search]).order(:name)
     else
@@ -17,7 +17,6 @@ class ProductsController < ApplicationController
   end
 
   def new
-    @categories = Category.all
     @product = Product.new
     @product.category_id = params[:catgory_id]
   end
@@ -33,7 +32,6 @@ class ProductsController < ApplicationController
    end
 
   def edit
-    @categories = Category.all
     @product = Product.find( params[:id] )
   end
 
