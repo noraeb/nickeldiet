@@ -1,28 +1,4 @@
-== README
+<h3> Nickelapp<h3>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+<p>I started this rails project for a friend who was diagnosed with a nickel allergy so that she can easily see what she can and can't eat.</p>
+<p>You can find the web app <a href="solate-atoll-56173.herokuapp.com">here</a></p>
