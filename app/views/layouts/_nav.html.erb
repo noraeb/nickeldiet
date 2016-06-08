@@ -32,7 +32,9 @@
           <% end %>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "Voeg toe", new_product_path %></li>
+          <% if can? :create, @product %>
+            <li><%= link_to "Voeg toe", new_product_path %></li>
+          <% end %>
           <li><%= link_to "Log in", user_session_path %></li>
         </ul>
 
